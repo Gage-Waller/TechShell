@@ -22,7 +22,7 @@ void printPrompt() {
     char cwd[1024];
     // gets current working directory
     if (getcwd(cwd, sizeof(cwd)) != NULL){
-        printf("%s$", cwd);
+        printf("%s$ ", cwd);
         fflush(stdout); // forces prompt to display
     } else {
         perror("getcwd"); // print error if above fails
